@@ -27,6 +27,7 @@ typedef struct mat {// Material structure
 typedef struct quad {// Quadric surface structure
 	double  a, b, c, d, e, f, g, h, j, k;// Surface coefficents
 	Mat     m;// Surface's material properties
+	Vec center;
 } Quad;
 
 typedef struct ray {// Ray structure

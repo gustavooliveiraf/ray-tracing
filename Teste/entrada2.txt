@@ -15,7 +15,7 @@ object 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 10.0 99.0 1.0 0.0 0.0 0.1 0.5 0.6 5 0 0 1
 object 1.0 1.0 1.0 0.0 0.0 0.0 5.0 5.0 30.0 949.0 0.0 0.0 1.0 0.1 0.5 0.4 4 0 0 1
 #
 # background color
-background 0.0 0.0 0.0
+background 1.0 1.0 1.0
 
-profundidade 0
+profundidade 1
 output twospheres.pnm

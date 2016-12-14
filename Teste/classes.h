@@ -15,6 +15,14 @@ class Color {
         double r, g, b;
 };
 
+Color rgb(double a, double b, double c) {
+    Color color;
+    color.r = a;
+    color.g = b;
+    color.b = c;
+    return color;
+ }
+
 class Config {
     public:
     double ambient, x0, y0, x1, y1;

@@ -35,8 +35,6 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="quadric.cpp" />
 		<Unit filename="quadric.h" />
-		<Unit filename="rayTracing.cpp" />
-		<Unit filename="rayTracing.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

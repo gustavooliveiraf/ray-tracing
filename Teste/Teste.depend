@@ -42,3 +42,45 @@
 	<sstream>
 	<cmath>
 
+1481755515 source:c:\users\thiago\documents\github\ray---tracing\teste\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<cmath>
+	"classes.h"
+
+1481755431 c:\users\thiago\documents\github\ray---tracing\teste\classes.h
+	"quadric.h"
+	<vector>
+	<iostream>
+	<fstream>
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<cmath>
+
+1481754288 c:\users\thiago\documents\github\ray---tracing\teste\quadric.h
+
+1481754372 c:\users\thiago\documents\github\ray---tracing\teste\raytracing.h
+	<cmath>
+	"quadric.h"
+	"classes.h"
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+
+1481475336 source:c:\users\thiago\documents\github\ray---tracing\teste\quadric.cpp
+	<math.h>
+	"quadric.h"
+
+1481755232 source:c:\users\thiago\documents\github\ray---tracing\teste\raytracing.cpp
+	"rayTracing.h"
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<cmath>
+

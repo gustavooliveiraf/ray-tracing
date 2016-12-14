@@ -5,10 +5,29 @@
 #include <cmath>
 
 #include "classes.h"
-#include "rayTracing.h"
 
 using namespace std;
 Config config;
+
+Color rayTracing(Ray ray, std::vector<Quad> object) {
+    if(ray.depth >= 0) {
+        for(int i = 0; i < object.size(); i++) {
+            if (intersect(ray, &object[i]) != -1)
+            {
+
+                return rgb(object[i].m.r, object[i].m.g, object[i].m.b);
+            }
+        }
+        return config.background;
+    }
+
+    return rgb(0,0,0);
+}
+
+Vec center(Quad quad) {
+    return mkvec(-quad.g, -quad.h, -quad.j);
+}
+
 
 int main () {
     string line, opt;
@@ -64,8 +83,10 @@ int main () {
                 Quad object;
                 stream >> object.a >> object.b >> object.c >> object.d >> object.e >> object.f >> object.g >> object.h >> object.j >> object.k
                 >> object.m.r >> object.m.g >> object.m.b >> object.m.Ka >> object.m.Kd >> object.m.Ks >> object.m.n >> object.m.KS >> object.m.KT >> object.m.ir;
+                object.center = center(object);
                 config.object.push_back(object);
                 continue;
+
             }
 
             if(opt == "output") {
@@ -94,9 +115,9 @@ int main () {
 
             tela[l][c] = rayTracing(ray, config.object);
 
-            tela[l][c].r = (tela[l][c].r == -1)? (int) config.background.r * 255 : (int) tela[l][c].r * 255;
-            tela[l][c].g = (tela[l][c].g == -1)? (int) config.background.g * 255 : (int) tela[l][c].g * 255;
-            tela[l][c].b = (tela[l][c].b == -1)? (int) config.background.b * 255 : (int) tela[l][c].b * 255;
+            tela[l][c].r = (int) tela[l][c].r * 255;
+            tela[l][c].g = (int) tela[l][c].g * 255;
+            tela[l][c].b = (int) tela[l][c].b * 255;
         }
 	}
 
@@ -116,3 +137,4 @@ int main () {
 
     return 0;
 }
+
