@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1481747536 source:c:\users\thiago\documents\github\ray---tracing-master\teste\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<cmath>
+	"classes.h"
+	"rayTracing.h"
+
+1481747382 c:\users\thiago\documents\github\ray---tracing-master\teste\classes.h
+	"quadric.h"
+	<vector>
+	<iostream>
+	<fstream>
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<cmath>
+
+1481475336 source:c:\users\thiago\documents\github\ray---tracing-master\teste\quadric.cpp
+	<math.h>
+	"quadric.h"
+
+1481750372 c:\users\thiago\documents\github\ray---tracing-master\teste\quadric.h
+
+1481746940 c:\users\thiago\documents\github\ray---tracing-master\teste\raytracing.h
+	<cmath>
+	"quadric.h"
+	"classes.h"
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+
+1481747967 source:c:\users\thiago\documents\github\ray---tracing-master\teste\raytracing.cpp
+	"rayTracing.h"
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	<cmath>
+
