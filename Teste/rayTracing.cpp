@@ -6,8 +6,10 @@ Vec rayTracing(Ray ray, int depth, Config config) {
 		for (int i = 0; i < config.object.size(); i++) {
 			if (intersect(ray, &config.object[i]) != -1)
 			{
-
-				return mkvec(config.object[i].m.r, config.object[i].m.g, config.object[i].m.b);
+				Vec local = mkvec(config.ambient * config.object[i].m.Ka * config.object[i].m.r,
+					config.ambient * config.object[i].m.Ka * config.object[i].m.g,
+					config.ambient * config.object[i].m.Ka * config.object[i].m.b);
+				return local; // mkvec(config.object[i].m.r, config.object[i].m.g, config.object[i].m.b);
 			}
 		}
 		return config.background;

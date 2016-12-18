@@ -30,6 +30,19 @@ typedef struct vec {// Vector structor
 
 		return tmp;
 	}
+
+	double operator * (vec& a) {
+		double dot = this->x*a.x + this->y*a.y + this->z*a.z;
+		return dot;
+	}
+
+	vec operator += (vec& a) {
+		this->x += a.x;
+		this->y += a.y;
+		this->z += a.z;
+		return *this;
+	}
+
 } Vec;
 
 typedef struct light {// Point light structure
@@ -48,6 +61,7 @@ typedef struct mat {// Material structure
 	double  KT;
 	double  ir;
 	int  n;// Specular reflection exponent
+	bool isTri = false;
 
 } Mat;
 
@@ -61,7 +75,6 @@ typedef struct ray {// Ray structure
 	Vec  dir;// Direction of ray
 	int  depth;// Depth (or length) of ray
 } Ray;
-
 
 double  dot(Vec, Vec);
 double  intersect(Ray ray, Quad *obj);

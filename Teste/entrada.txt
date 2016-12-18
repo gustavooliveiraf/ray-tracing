@@ -11,6 +11,6 @@ ambient 0.5
 #red sphere at x=0, y=0, z=-10 radius=1
 object 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 10.0 99.0 1.0 0.0 0.0 0.2 0.5 0.6 5 0 0 1
 # background color
-background 1.0 1.0 1.0
-profundidade 0
-output onesphere.pnm
+background 0.0 0.0 0.0
+profundidade 2
+output onespheres.pnm
