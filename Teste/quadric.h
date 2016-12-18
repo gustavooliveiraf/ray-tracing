@@ -2,7 +2,34 @@
 #define _quadric_h
 
 typedef struct vec {// Vector structor
-	double  x, y, z;// Coefficents of vector direction
+	double  x, y, z;// Coefficents of vector directionz
+
+	vec operator + (vec& a) {
+		vec tmp;
+		tmp.x = this->x + a.x;
+		tmp.y = this->y + a.y;
+		tmp.z = this->z + a.z;
+
+		return tmp;
+	}
+
+	vec operator - (vec& a) {
+		vec tmp;
+		tmp.x = this->x - a.x;
+		tmp.y = this->y - a.y;
+		tmp.z = this->z - a.z;
+
+		return tmp;
+	}
+
+	vec operator * (double k) {
+		vec tmp;
+		tmp.x = k*this->x;
+		tmp.y = k*this->y;
+		tmp.z = k*this->z;
+
+		return tmp;
+	}
 } Vec;
 
 typedef struct light {// Point light structure
@@ -27,7 +54,6 @@ typedef struct mat {// Material structure
 typedef struct quad {// Quadric surface structure
 	double  a, b, c, d, e, f, g, h, j, k;// Surface coefficents
 	Mat     m;// Surface's material properties
-	Vec center;
 } Quad;
 
 typedef struct ray {// Ray structure

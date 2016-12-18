@@ -10,27 +10,25 @@
 #include <sstream>
 #include <cmath>
 
-class Color {
-    public:
-        double r, g, b;
-};
+//struct Color {
+//       double r, g, b;
+//};
+//
+//Color rgb(double a, double b, double c) {
+//    Color color;
+//    color.r = a;
+//    color.g = b;
+//    color.b = c;
+//    return color;
+// }
 
-Color rgb(double a, double b, double c) {
-    Color color;
-    color.r = a;
-    color.g = b;
-    color.b = c;
-    return color;
- }
-
-class Config {
-    public:
+struct Config {
     double ambient, x0, y0, x1, y1;
     int profundidade, width, height;
     std::string output;
     Vec eye;
     std::vector<Light> light;
-    Color background;
+    Vec background;
     std::vector<Quad> object;
 };
 

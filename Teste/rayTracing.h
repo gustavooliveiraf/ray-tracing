@@ -9,10 +9,7 @@
 #include <string>
 #include <sstream>
 
-Color rayTracing(Ray ray, std::vector<Quad> object);
+Vec rayTracing(Ray ray, int depth, Config config);
 double distance(Vec ptA, Vec ptB);
-Color rgb(double a, double b, double c);
-Color nc();
-Vec get_center(Quad quad);
 
 #endif // RAYTRACING_H_INCLUDED

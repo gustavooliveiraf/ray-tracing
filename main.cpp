@@ -104,7 +104,7 @@ int main() {//(int argc, char** argv)
             ray.org = eye;
             ray.dir = vsub(pixelPos, eye);
 
-            tela[i][j] = rayTracing(ray, 4);
+            tela[i][j] = rayTracing(ray, 4); 
         }
 	}
 
